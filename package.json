@@ -1,0 +1,19 @@
+{
+  "name": "projet-4",
+  "version": "1.0.0",
+  "description": "\"# Projet-4-OC\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bastienandre7/Projet-4-OC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bastienandre7/Projet-4-OC/issues"
+  },
+  "homepage": "https://github.com/bastienandre7/Projet-4-OC#readme"
+}
