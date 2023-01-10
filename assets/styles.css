@@ -115,6 +115,21 @@ img {
     background-color: #f7f7f7;
 }
 
+.bouton-fonctionnement-rose {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: 70px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border-width: 0px;
+    font-weight: 500;
+    padding-top: 25px;
+    background-color: #F5EDFF;
+}
+
 
 .chiffre {
     display: flex;
@@ -139,6 +154,7 @@ img {
 .fa-store {
     margin-left: -20px;
     padding-right: 20px;
+    color: var(--violet);
 }
 
 .nombre {
@@ -155,6 +171,9 @@ img {
     padding-left: 7px;
     padding-right: 7px;
 }
+
+
+
 
 /* Restaurant */
 
@@ -343,6 +362,8 @@ a {
     justify-content: space-between;
 }
 
+
+
 .display-bouton-commander {
     display: flex;
     justify-content: center;
@@ -378,9 +399,40 @@ a {
 .display-menu {
     font-size: medium;
     padding-left: 20px;
+    text-align: left;
 }
 
 h4 {
     display: flex;
     justify-content: left;
+}
+
+
+.fa-heart:hover {
+    color: var(--violet);
+    font-weight: bold;
+    animation: remplissage 2s cubic-bezier(0.2, 0.4, 0.6,1);
+    transition: all 2s linear 0s;
+}
+
+
+/*  *  * Loader *  *  */
+
+
+.background-body-loader{
+    background-color: var(--vert-clair);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+.icon-loader {
+    font-size: xx-large;
+    color: white;
+    animation: loader infinite 0.3s alternate;
 }
