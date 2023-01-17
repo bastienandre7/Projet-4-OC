@@ -214,9 +214,44 @@ a {
 }
 
 .fa-heart {
+    overflow: hidden;
     display: flex;
-    width: 100%;
-    background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);;
+    position:relative;
+    overflow: hidden;
+    z-index: 1;
+    color: black;
+}
+
+
+
+.fa-heart:hover {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    animation: remplissage 2s;
+    font-weight: bold;
+}
+
+@keyframes remplissage {
+    from{
+        background: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        font-weight: 100;
+    }
+
+    to{
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        font-weight: bold;
+    }
 }
 
 .margin-texte-bouton {
@@ -233,9 +268,7 @@ a {
 }
 
 .coeur {
-    width: 20px;
-    height: 20px;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-right: 20px;
 }
 
@@ -331,8 +364,8 @@ a {
 }
 
 .padding-coeur {
-    padding-top: 45px;
-    padding-right: 10px;
+    padding-top: 30px;
+    padding-right: 15px;
 }
 
 .padding-soustitres {
@@ -344,6 +377,7 @@ a {
     text-decoration-thickness: 3px;
 }
 
+/* Carte plats */
 .display-bouton-commande {
     display: flex;
     justify-content: center;
@@ -352,17 +386,70 @@ a {
 
 .bouton-commande {
     margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
     background-color: white;
     border-radius: 15px;
     border-style: none;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    visibility: visible;
 }
 
 
+.bouton-commande:hover .check{
+    visibility: visible;
+    animation: menu 1500ms;
+}
+
+.bouton-commande:hover .deplacement-prix {
+    position: absolute;
+    left:250px;
+}
+
+
+
+.bouton-decoration {
+    border: none;
+    background: none;
+}
+
+
+
+.check {
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    right: 0px;
+    background-color: var(--vert-clair);
+    visibility: hidden;
+    margin-left: 20px;
+    z-index: -3;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.fa-circle-check{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+    color: white;
+}
+@keyframes menu {
+    from{
+        width: 0px;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+
+/*        */
 
 .display-bouton-commander {
     display: flex;
@@ -397,7 +484,7 @@ a {
 }
 
 .display-menu {
-    font-size: medium;
+    font-size: small;
     padding-left: 20px;
     text-align: left;
 }
@@ -405,15 +492,12 @@ a {
 h4 {
     display: flex;
     justify-content: left;
+    font-size: larger;
 }
 
 
-.fa-heart:hover {
-    color: var(--violet);
-    font-weight: bold;
-    animation: remplissage 2s cubic-bezier(0.2, 0.4, 0.6,1);
-    transition: all 2s linear 0s;
-}
+
+
 
 
 /*  *  * Loader *  *  */
@@ -421,18 +505,83 @@ h4 {
 
 .background-body-loader{
     background-color: var(--vert-clair);
+    font-family: 'Shrikhand';
+    width: 100%;
+    height: 250%;
+    position: absolute;
+    top: 0px;
+    animation-name: affichage;
+    animation-duration: 3s;
+    visibility: hidden;
+    z-index: 0;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    vertical-align: middle;
+    padding-top: 100%;
 }
 
 
 .icon-loader {
+    position: relative;
     font-size: xx-large;
     color: white;
     animation: loader infinite 0.3s alternate;
+}
+
+.l1 {
+    animation-delay: 0.05s;
+}
+
+.l2 {
+    animation-delay: 0.1s;
+}
+
+.l3 {
+    animation-delay: 0.15s;
+}
+
+.l4 {
+    animation-delay: 0.25s;
+}
+
+.l5 {
+    animation-delay: 0.25s;
+}
+
+.l6 {
+    animation-delay: 0.3s;
+}
+
+.l7 {
+    animation-delay: 0.35s;
+}
+
+.l8 {
+    animation-delay: 0.40s;
+}
+
+@keyframes loader {
+    100% {
+        transform: translateY(15px);
+}
+
+}
+
+@keyframes affichage {
+    from {
+        visibility: visible;
+        z-index: 1;
+    }
+
+    99% {
+        visibility: visible;
+        z-index: 1;
+    }
+
+    to {
+        visibility: hidden;
+        z-index: 0;
+    }
 }
