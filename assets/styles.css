@@ -53,10 +53,8 @@ img {
 
 .titre-reservez {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     text-align: center;
-    width: 250px;
-    padding-left: 70px;
 }
 
 .texte-decrivez {
@@ -236,7 +234,7 @@ a {
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    animation: remplissage 2s;
+    animation: remplissage 1.5s;
     font-weight: bold;
 }
 
@@ -257,6 +255,7 @@ a {
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
         font-weight: bold;
+        transform: scale(1.3);
     }
 }
 
@@ -268,6 +267,7 @@ a {
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
         font-weight: bold;
+        transform: scale(1.3);
     }
 
     to{
@@ -351,8 +351,9 @@ a {
 
 .fa-arrow-left {
     color: var(--background-footer);
-    margin-left: -70px;
     padding-right: 80px;
+    position: absolute;
+    left: 15%;
 }
 
 .titre-ohmyfood-restaurant {
@@ -363,6 +364,7 @@ a {
 .image-palette-du-gout {
     background-image: url("/assets/images/Images\ et\ textes\ Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-size: cover;
+    background-position: center;
     height: 220px;
     margin-bottom: -20px;
 }
@@ -370,6 +372,7 @@ a {
 .image-les-délices-des-sens {
     background-image: url("/assets/images/Images\ et\ textes\ Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-size: cover;
+    background-position: center;
     height: 220px;
     margin-bottom: -20px;
 }
@@ -377,6 +380,7 @@ a {
 .image-la-note-enchantée {
     background-image: url("/assets/images/Images\ et\ textes\ Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     background-size: cover;
+    background-position: center;
     height: 220px;
     margin-bottom: -20px;
 }
@@ -384,6 +388,7 @@ a {
 .image-a-la-francaise {
     background-image: url("/assets/images/Images\ et\ textes\ Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-size: cover;
+    background-position: center;
     height: 220px;
     margin-bottom: -20px;
 }
@@ -736,15 +741,6 @@ h4 {
 
     /* Header */
 
-    .titre-reservez {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        position: relative;
-        left: 35%;
-        padding: 0px;
-    }
-
     .background-header {
         justify-content: center;
     }
@@ -866,12 +862,26 @@ h4 {
         margin-left: 5%;
     }
 
+    /* Commandes */
+
+    .display-bouton-commande {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .padding-soustitres {
+        padding-left: 10%;
+    }
+
+
+
 
 }
 
 @media screen and (min-width: 992px){
 
     /* Header */
+
 
     .titre-reservez {
         left: 0%;
@@ -902,6 +912,12 @@ h4 {
         padding-top: 30px;
     }
 
+    /* Loader */
+
+    .container {
+        padding-top: 25%;
+    }
+
 
     /* * * Restaurant * * */
 
@@ -909,26 +925,33 @@ h4 {
 
     .image-palette-du-gout {
         height: 300px;
-        background-position: center;
         margin-bottom: -40px;
     }
 
     .image-a-la-francaise {
         height: 300px;
-        background-position: center;
         margin-bottom: -40px;
     }
 
     .image-la-note-enchantée{
         height: 300px;
-        background-position: center;
         margin-bottom: -40px;
     }
 
     .image-les-délices-des-sens {
         height: 300px;
-        background-position: center;
         margin-bottom: -40px;
+    }
+
+    /* Commandes */
+
+    .display-bouton-commande {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .padding-soustitres {
+        padding-left: 10%;
     }
 
 
