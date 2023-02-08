@@ -657,6 +657,7 @@ h4 {
     background-color: var(--vert-clair);
     font-family: 'Shrikhand';
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0px;
     animation-name: affichage;
