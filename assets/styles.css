@@ -657,7 +657,6 @@ h4 {
     background-color: var(--vert-clair);
     font-family: 'Shrikhand';
     width: 100%;
-    height: 250%;
     position: absolute;
     top: 0px;
     animation-name: affichage;
@@ -832,10 +831,6 @@ h4 {
     }
 
     /* Loader */
-
-    .background-body-loader {
-        height: 140%;
-    }
 
     .container {
         padding-top: 50%;
